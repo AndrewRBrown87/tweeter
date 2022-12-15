@@ -19,6 +19,13 @@ $(document).ready(function() {
     }
   }
 
+  //escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Takes in a tweet object and is responsible for returning a tweet <article> element
   const createTweetElement = function(tweetObject) {
     const $tweetArticle = $(`
@@ -31,7 +38,7 @@ $(document).ready(function() {
           <div class="handle">${tweetObject.user.handle}</div>
         </header>
         <div class="tweet-data">
-          ${tweetObject.content.text}
+          ${escape(tweetObject.content.text)}
         </div>
         <footer>
           <div>${timeago.format(tweetObject.created_at)}</div>
@@ -54,16 +61,19 @@ $(document).ready(function() {
   $form.on('submit', (event) => {
     event.preventDefault();
     const data = $form.serialize();
-    const text = data.substring(5);
-
+    const text = $('#tweet-text').val();
+    
     if (text === null || text === "") {
-      alert("Error, tweet is empty.");
+      $('#error-message').text("Error! Tweet is empty.")
+      $('.error').slideDown();
     } else if (text.length > 140) {
-      alert("Error, tweet exceeds 140 characters.")
+      $('#error-message').text("Error! Tweet exceeds 140 characters.")
+      $('.error').slideDown();
     } else {
       //clear the tweet form
       $('#tweet-text').val('');
       $('#count').val("140");
+      $('.error').slideUp();
       $.post('/tweets', data, (response) => {
         loadTweets();
       });
