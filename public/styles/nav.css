@@ -9,6 +9,14 @@ nav {
   align-items: flex-end;
 }
 
+nav button {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
 .tweeter {
   font-size: 48px;
   font-family: 'Bungee', cursive;
@@ -34,5 +42,19 @@ nav {
 
 .arrows {
   color: red;
+  margin-top: 5px;
   margin-bottom: 20px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transform-origin: top;
+}
+
+.bounce-1 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
