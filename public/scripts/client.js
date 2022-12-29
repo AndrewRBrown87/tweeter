@@ -90,7 +90,6 @@ $(document).ready(function() {
   loadTweets();
 
   //New tweet button functionality
-
   $('#new-tweet-button').click(function(){
     if($('.new-tweet').css('display') !== 'block') {
       $('.new-tweet').slideDown();
