@@ -17,3 +17,17 @@
   color: #FFFFFF;
   font-size: 48px;
 }
+
+@media only screen and (min-width: 1024px) {
+  .user {
+    width: 40%;
+    height: 400px;
+    margin: 50px;
+    margin-top: 170px;
+  }
+
+  .profile {
+    margin-top: 0;
+  }
+
+ }

@@ -52,6 +52,7 @@ section{
 
 form {
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .error {
@@ -62,3 +63,12 @@ form {
   padding: 5px;
   margin-bottom: 10px;
 }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+    float: right;
+    margin: 40px;
+    margin-top: 170px;
+  }
+ }
