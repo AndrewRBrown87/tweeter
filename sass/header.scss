@@ -1,11 +1,18 @@
-.user {
+$background-color: #00ba66;
+$font-color: #FFFFFF;
+
+@mixin vertical-align() {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.user {
+  @include vertical-align();
   height: 520px;
   width: 100%;
   flex-direction: column;
-  background-color: #00ba66;
+  background-color: $background-color;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 }
 
@@ -14,7 +21,7 @@
 }
 
 .name {
-  color: #FFFFFF;
+  color: $font-color;
   font-size: 48px;
 }
 
@@ -25,7 +32,9 @@
     margin: 50px;
     margin-top: 170px;
   }
+
   .profile {
     margin-top: 0;
   }
-}
+
+ }

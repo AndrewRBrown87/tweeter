@@ -1,3 +1,9 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+$background-color: #f4f1ec;
+$font-color: #545149;
+$button-color: red;
+$button-font-color: #FFFFFF;
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -6,7 +12,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,25 +19,27 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $font-color;
+  background-color: $background-color;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $font-stack;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
+
+ main {
   display: flex;
   flex-direction: column;
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: $background-color;
   justify-content: center;
-}
+ }
 
-#back-to-top-button {
+ #back-to-top-button {
   display: none;
   border: 0;
   border-radius: 50%;
@@ -40,22 +47,24 @@ main {
   height: 70px;
   background: none;
   box-shadow: none;
-  background-color: red;
-  color: #FFFFFF;
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  background-color: $button-color;
+  color: $button-font-color;
+  position:fixed;
+  right:0;
+  bottom:0;
   margin: 10px;
-}
+ }
 
-@media only screen and (min-width: 1024px) {
+ @media only screen and (min-width: 1024px) {
   .content {
     display: flex;
   }
+  
   .user {
     width: 40%;
     height: 400px;
     margin: 50px;
     margin-top: 170px;
   }
-}
+
+ }

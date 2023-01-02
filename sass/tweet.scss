@@ -1,30 +1,35 @@
+$icon-color: #4056A1;
+$icon-hover-color: goldenrod;
+$tweet-shadow-color: lightgrey;
+$tweet-border-color: #545149;
+
 .tweet {
   display: flex;
   flex-direction: column;
-  border: 4px solid #545149;
+  border: 4px solid $tweet-border-color;
   padding-top: 15px;
   margin-bottom: 25px;
 }
 
 .tweet:hover {
-  box-shadow: 6px 6px lightgrey;
+  box-shadow: 6px 6px $tweet-shadow-color;
 }
 
 .icons {
-  color: #4056A1;
+  color: $icon-color;
   font-size: 12px;
 }
 
 .fa-flag:hover {
-  color: goldenrod;
+  color:$icon-hover-color;
 }
 
 .fa-retweet:hover {
-  color: goldenrod;
+  color:$icon-hover-color;
 }
 
 .fa-heart:hover {
-  color: goldenrod;
+  color:$icon-hover-color;
 }
 
 .fa-solid {
@@ -52,8 +57,8 @@ article.tweet img {
 }
 
 .handle {
-  font-weight: bold;
-  color: lightgrey;
+  font-weight:bold;
+  color:$tweet-shadow-color;
 }
 
 article.tweet footer {
@@ -73,9 +78,9 @@ article.tweet footer {
   width: 97%;
   height: 90px;
   margin: 0 auto;
-  border-bottom: 4px solid #545149;
+  border-bottom: 4px solid $tweet-border-color;
   padding-left: 1em;
   padding-right: 1em;
   font-size: 22px;
-  font-weight: bold;
+  font-weight:bold;
 }

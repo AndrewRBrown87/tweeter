@@ -1,24 +1,30 @@
+$font-stack: 'Bungee', cursive;
+$background-color: #4056A1;
+$font-color: #FFFFFF;
+$arrow-color: red;
+
 nav {
   display: flex;
   height: 120px;
   width: 100%;
   position: fixed;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: $background-color;
+  color: $font-color;
   justify-content: space-between;
   align-items: flex-end;
-}
-nav button {
-  border: 0;
-  background: none;
-  box-shadow: none;
-  background-color: #4056A1;
-  color: #FFFFFF;
+
+  button {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    background-color: $background-color;
+    color: $font-color;
+  }
 }
 
 .tweeter {
   font-size: 48px;
-  font-family: "Bungee", cursive;
+  font-family: $font-stack;
   margin-left: 1.5em;
   margin-bottom: 20px;
 }
@@ -40,7 +46,7 @@ nav button {
 }
 
 .arrows {
-  color: red;
+  color: $arrow-color;
   margin-top: 5px;
   margin-bottom: 20px;
   animation-duration: 1.5s;
@@ -52,15 +58,8 @@ nav button {
   animation-name: bounce-1;
   animation-timing-function: linear;
 }
-
 @keyframes bounce-1 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }

@@ -1,7 +1,15 @@
+$font-stack: 'Bungee', cursive;
+$background-color: #4056A1;
+$font-color: #FFFFFF;
+$error-color: red;
+$error-background-color: rgba(255, 255, 0, 0.5);
+$textbox-color: #f4f1ec;
+$textbox-border-color: #545149;
+
 #submit-tweet-button {
-  font-family: "Bungee", cursive;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $font-color;
 }
 
 .new-tweet {
@@ -9,11 +17,11 @@
 }
 
 output {
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
 }
 
 .negative {
-  color: red;
+  color: $error-color;
 }
 
 label {
@@ -23,10 +31,10 @@ label {
 textarea {
   width: 100%;
   font-size: 20px;
-  background-color: #f4f1ec;
+  background-color: $textbox-color;
   resize: none;
   border: 0px;
-  border-bottom: 4px solid #545149;
+  border-bottom: 4px solid $textbox-border-color;
 }
 
 .container {
@@ -46,7 +54,7 @@ textarea {
   justify-content: space-between;
 }
 
-section {
+section{
   width: 100%;
 }
 
@@ -57,9 +65,9 @@ form {
 
 .error {
   display: none;
-  background-color: rgba(255, 255, 0, 0.5);
-  color: red;
-  border: 4px solid red;
+  background-color: $error-background-color;
+  color: $error-color;
+  border: 4px solid $error-color;
   padding: 5px;
   margin-bottom: 10px;
 }
@@ -71,4 +79,4 @@ form {
     margin: 40px;
     margin-top: 170px;
   }
-}
+ }
