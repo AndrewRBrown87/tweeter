@@ -16,3 +16,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Tweeter Desktop Layout"](https://github.com/AndrewRBrown87/tweeter/blob/master/docs/desktop-layout.png?raw=true)
+
+!["Tweeter Mobile Layout"](https://github.com/AndrewRBrown87/tweeter/blob/master/docs/mobile-layout.png?raw=true)

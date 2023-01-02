@@ -17,10 +17,10 @@ $(document).ready(function() {
       // takes return value and appends it to the tweets container
       $('#tweets-container').prepend($tweet);
     }
-  }
+  };
 
   //escape function
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -52,7 +52,7 @@ $(document).ready(function() {
     `);
 
     return $tweetArticle;
-  }
+  };
 
   //grab the new tweet form
   const $form = $('#new-tweet-form');
@@ -64,10 +64,10 @@ $(document).ready(function() {
     const text = $('#tweet-text').val();
     
     if (text === null || text === "") {
-      $('#error-message').text("Error! Tweet is empty.")
+      $('#error-message').text("Error! Tweet is empty.");
       $('.error').slideDown();
     } else if (text.length > 140) {
-      $('#error-message').text("Error! Tweet exceeds 140 characters.")
+      $('#error-message').text("Error! Tweet exceeds 140 characters.");
       $('.error').slideDown();
     } else {
       //clear the tweet form
@@ -80,7 +80,7 @@ $(document).ready(function() {
     }
   });
 
-  //get the list of tweets 
+  //get the list of tweets
   const loadTweets = function() {
     $.get('/tweets', (tweets) => {
       renderTweets(tweets);
@@ -90,14 +90,12 @@ $(document).ready(function() {
   loadTweets();
 
   //New tweet button functionality
-  $('#new-tweet-button').click(function(){
-    if($('.new-tweet').css('display') !== 'block') {
+  $('#new-tweet-button').click(function() {
+    if ($('.new-tweet').css('display') !== 'block') {
       $('.new-tweet').slideDown();
       $('#tweet-text').focus();
     } else {
       $('.new-tweet').slideUp();
     }
-    
   });
-
 });
